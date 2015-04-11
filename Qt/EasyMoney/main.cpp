@@ -1,4 +1,5 @@
-#include "mainwindow.h"
+#include "MainWindow.h"
+#include "AutoMatch.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])

@@ -12,15 +12,18 @@ TARGET = EasyMoney
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        mainwindow.cpp \
-    form.cpp
+SOURCES += main.cpp \
+    MainWindow.cpp \
+    AutoMatch.cpp
 
-HEADERS  += mainwindow.h \
-    form.h
+HEADERS  += \
+    MainWindow.h \
+    AutoMatch.h
 
-FORMS    += mainwindow.ui \
-    form.ui
+FORMS    += \
+    MainWindow.ui \
+    AutoMatch.ui \
+    checkbox.ui \
+    buttons.ui
 
-DISTFILES += \
-    asdf.py
+DISTFILES +=

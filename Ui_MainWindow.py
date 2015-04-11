@@ -1,24 +1,43 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Qt/EasyMoney/mainwindow.ui'
+# Form implementation generated from reading ui file 'Qt/EasyMoney/MainWindow.ui'
 #
-# Created: Sun Mar 15 15:13:58 2015
+# Created: Wed Mar 18 00:12:50 2015
 #      by: PyQt5 UI code generator 5.4
 #
 # WARNING! All changes made in this file will be lost!
-import sys
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setWindowModality(QtCore.Qt.NonModal)
-        MainWindow.resize(809, 738)
+        MainWindow.resize(801, 704)
         self.centralWidget = QtWidgets.QWidget(MainWindow)
         self.centralWidget.setObjectName("centralWidget")
-        self.formLayout = QtWidgets.QFormLayout(self.centralWidget)
-        self.formLayout.setObjectName("formLayout")
+        self.gridLayout_2 = QtWidgets.QGridLayout(self.centralWidget)
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.gridLayout = QtWidgets.QGridLayout()
+        self.gridLayout.setObjectName("gridLayout")
+        self.sel_Import = QtWidgets.QComboBox(self.centralWidget)
+        self.sel_Import.setObjectName("sel_Import")
+        self.sel_Import.addItem("")
+        self.sel_Import.addItem("")
+        self.gridLayout.addWidget(self.sel_Import, 0, 0, 1, 1)
+        self.date_rowDate = QtWidgets.QDateEdit(self.centralWidget)
+        self.date_rowDate.setDateTime(QtCore.QDateTime(QtCore.QDate(2012, 12, 1), QtCore.QTime(0, 0, 0)))
+        self.date_rowDate.setCalendarPopup(True)
+        self.date_rowDate.setObjectName("date_rowDate")
+        self.gridLayout.addWidget(self.date_rowDate, 3, 0, 1, 1)
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralWidget)
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.gridLayout.addWidget(self.pushButton_2, 5, 0, 1, 1)
+        self.btn_New = QtWidgets.QPushButton(self.centralWidget)
+        self.btn_New.setObjectName("btn_New")
+        self.gridLayout.addWidget(self.btn_New, 2, 0, 1, 1)
         self.tableWidget = QtWidgets.QTableWidget(self.centralWidget)
+        self.tableWidget.setMinimumSize(QtCore.QSize(256, 0))
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(4)
         self.tableWidget.setRowCount(2)
@@ -38,12 +57,14 @@ class Ui_MainWindow(object):
         self.tableWidget.setHorizontalHeaderItem(3, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setItem(0, 0, item)
-        self.formLayout.setWidget(1, QtWidgets.QFormLayout.SpanningRole, self.tableWidget)
-        self.pushButton = QtWidgets.QPushButton(self.centralWidget)
-        self.pushButton.setObjectName("pushButton")
-        self.formLayout.setWidget(2, QtWidgets.QFormLayout.LabelRole, self.pushButton)
+        self.gridLayout.addWidget(self.tableWidget, 1, 0, 1, 1)
+        self.btn_Save = QtWidgets.QPushButton(self.centralWidget)
+        self.btn_Save.setEnabled(True)
+        self.btn_Save.setFlat(False)
+        self.btn_Save.setObjectName("btn_Save")
+        self.gridLayout.addWidget(self.btn_Save, 4, 0, 1, 1)
+        self.gridLayout_2.addLayout(self.gridLayout, 1, 1, 1, 1)
         MainWindow.setCentralWidget(self.centralWidget)
-        self.menuBar = QtWidgets.QMenuBar(MainWindow)
         self.statusBar = QtWidgets.QStatusBar(MainWindow)
         self.statusBar.setObjectName("statusBar")
         MainWindow.setStatusBar(self.statusBar)
@@ -54,6 +75,10 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Easy Money"))
+        self.sel_Import.setItemText(0, _translate("MainWindow", "import #1"))
+        self.sel_Import.setItemText(1, _translate("MainWindow", "import #2"))
+        self.pushButton_2.setText(_translate("MainWindow", "PushButton"))
+        self.btn_New.setText(_translate("MainWindow", "New"))
         item = self.tableWidget.verticalHeaderItem(0)
         item.setText(_translate("MainWindow", "row1"))
         item = self.tableWidget.verticalHeaderItem(1)
@@ -69,16 +94,5 @@ class Ui_MainWindow(object):
         __sortingEnabled = self.tableWidget.isSortingEnabled()
         self.tableWidget.setSortingEnabled(False)
         self.tableWidget.setSortingEnabled(__sortingEnabled)
-        self.pushButton.setText(_translate("MainWindow", "Exit"))
+        self.btn_Save.setText(_translate("MainWindow", "Save"))
 
-
-if __name__ == '__main__':
-    app = QtWidgets.QApplication(sys.argv)
-    window = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(window)
-    window.show()
-    app.exec_()
-    #main()
-    #ui.setupUi()
-    

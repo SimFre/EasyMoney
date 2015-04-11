@@ -7,7 +7,7 @@ Qt/build-*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
+*.py[codE]
 
 # C extensions
 *.so
@@ -62,3 +62,6 @@ docs/_build/
 
 # PyBuilder
 target/
+
+*.pyc
+*.pyE
