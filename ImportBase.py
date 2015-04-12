@@ -167,6 +167,13 @@ class ImportBase:
             where trImport=?
         """, [accountId, importId])
     
+    def setImportComment(self, importId, comment):
+        self.db.connection.cursor().execute("""
+            update imports set
+                imComment=?
+            where imId=?
+        """, [comment, importId])
+    
     def setTransactionValue(self, transactionId, fieldName, newValue):
         sql = None
 
@@ -227,13 +234,14 @@ class ImportBase:
         
         counter = 0
         for row in result:
-            print("ID:", row.get("trId"), "Cat:", row.get("category"), "Destination", row.get("destination"))
-            self.db.connection.cursor().execute("""
-                update transactions set
-                    trCategory=?,
-                    trDestination=?
-                where trID=?
-            """, [row.get("category"), row.get("destination"), row.get("trId")])
+            self.setTransactionValue(row.get("trId"), "trCategory", row.get("category"))
+            #print("ID:", row.get("trId"), "Cat:", row.get("category"), "Destination", row.get("destination"))
+            #self.db.connection.cursor().execute("""
+            #    update transactions set
+            #        trCategory=?,
+            #        trDestination=?
+            #    where trID=?
+            #""", [row.get("category"), row.get("destination"), row.get("trId")])
             counter += 1
         return counter
     
