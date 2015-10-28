@@ -1,4 +1,4 @@
-# 81562  9933661754  Privatkonto             SEK      14-02-24            14-02-25              2618690051785079                          L?n                                  29 742,90
+# nnnnn  nnnnnnnnnn  Privatkonto             SEK      14-02-24            14-02-25              nnnnnnnnnnnnnnnn                          L?n                                  12 345,67
 import re, datetime
 class ImportTransactionsSwedbank:
     def __init__(self, inputFilename, codepage):
@@ -142,7 +142,7 @@ class ImportTransactionsSwedbank:
 # accountId = 1
 # dbFile = "/Users/laban/Documents/Ekonomi/Transactions.db"
 # inputFilename = "/Users/laban/Documents/Ekonomi/Swedbank/Swebank_20140204-20150303.txt"
-# card = "Privatkonto (81562.9933661754)"
+# card = "Privatkonto (nnnnn.nnnnnnnnnn)"
 # service = "Swedbank"
 #
 # it = ImportTransactionsSwedbank(inputFilename)

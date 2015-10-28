@@ -26,7 +26,7 @@ if  __name__ == '__main__':
 
         # SAS Eurobonus Mastercard
         # inputFilename = "/Users/laban/Documents/Ekonomi/SAS Eurobonus Mastercard/"
-        # card = "Fredriksson Simon (525412******1913)"
+        # card = "Fredriksson Simon (nnnnnn******nnnn)"
         # ib.importFile(inputFilename + "Kontoutdrag-201405.xlsx", card)
         # ib.importFile(inputFilename + "Kontoutdrag-201406.xlsx", card)
         # ib.importFile(inputFilename + "Kontoutdrag-201407.xlsx", card)
@@ -53,7 +53,7 @@ if  __name__ == '__main__':
 
         # Swedbank
         # inputFilename = "/Users/laban/Documents/Ekonomi/Swedbank/Swedbank_20140530-20150304.txt"
-        # card = "Privatkonto (81562.9933661754)"
+        # card = "Privatkonto (nnnnn.nnnnnnnnnn)"
         # codepage = "utf8"
         # ib.importFile(inputFilename, card, codepage)
 
