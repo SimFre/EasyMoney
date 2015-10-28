@@ -217,7 +217,7 @@ class Control_MainWindow:
         #QtGui.QMessageBox.information(self, 'Message Title', 'The Bosy Text', QtGui.MessageBox.No | QtGui.MessageBox.Yes | QtGui.MessageBox.Cancel)
 
     def __init__(self, ui, ib):
-        locale.setlocale(locale.LC_ALL, 'sv_SE')
+        #locale.setlocale(locale.LC_ALL, 'sv_SE')
         #_translate = QtCore.QCoreApplication.translate
         self.ui = ui
         self.ib = ib

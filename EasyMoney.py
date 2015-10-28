@@ -7,7 +7,8 @@ from Ui_MainWindow import Ui_MainWindow
 from Control_MainWindow import Control_MainWindow
 
 if  __name__ == '__main__':
-    dbFile = "/Users/laban/Documents/Ekonomi/Transactions.db"
+    #dbFile = "/Users/laban/Documents/Ekonomi/Transactions.db"
+    dbFile = "/home/laban/Documents/Ekonomi/Transactions.db"
     with DbConnection(dbFile, False) as db:
         print("Database:", dbFile)
 
